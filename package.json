@@ -1,0 +1,35 @@
+{
+  "name": "angular-webpack-seed",
+  "version": "1.0.0",
+  "description": "seed for angular 1 apps with webpack",
+  "main": "index.js",
+  "scripts": {
+    "dev": "",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernandomoraes/angular-webpack-seed.git"
+  },
+  "keywords": [
+    "angular",
+    "seed",
+    "webpack"
+  ],
+  "author": "Fernando Moraes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fernandomoraes/angular-webpack-seed/issues"
+  },
+  "homepage": "https://github.com/fernandomoraes/angular-webpack-seed#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.5.1"
+  },
+  "dependencies": {
+    "angular": "^1.6.5"
+  }
+}
