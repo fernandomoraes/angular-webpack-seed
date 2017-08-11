@@ -1,10 +1,11 @@
 const path = require('path');
 const isProd = false;
+const srcFolder = 'src';
 
 const config = {
 	entry: {
-		index: path.resolve(__dirname, 'src', 'index.js'),
-		about: path.resolve(__dirname, 'src', 'about.js')
+		index: path.resolve(__dirname, srcFolder, 'main', 'index.js'),
+		about: path.resolve(__dirname, srcFolder, 'about', 'about.js')
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
@@ -12,7 +13,7 @@ const config = {
 	},
 	plugins: [],
 	module: {
-		loaders: require('./webpack/loaders')({ isProd })
+		loaders: require('./webpack/loaders')({ isProd, srcFolder })
 	}
 };
 
@@ -21,12 +22,12 @@ const commonsChunkNames = commonsChunk.getChunksNames();
 
 const pages = {
 	index: {
-		template: path.resolve(__dirname, 'src', 'about.template.html'),
+		template: path.resolve(__dirname, srcFolder, 'main', 'index.template.html'),
 		filename: 'index.html',
 		chunks: commonsChunkNames.concat('index')
 	},
 	about: {
-		template: path.resolve(__dirname, 'src', 'about.template.html'),
+		template: path.resolve(__dirname, srcFolder, 'about', 'about.template.html'),
 		filename: 'about.html',
 		chunks: commonsChunkNames.concat('about')
 	}
